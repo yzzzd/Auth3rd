@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     SignInButton signInButton;
     AppCompatButton signOutButton;
+    AppCompatButton smsButton;
     TextView tvEmail;
 
 
@@ -62,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signOut();
+            }
+        });
+
+        smsButton = findViewById(R.id.btn_sms);
+        smsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SMSActivity.class));
             }
         });
 
